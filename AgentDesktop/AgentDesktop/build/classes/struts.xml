@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+    <constant name="struts.devMode" value="false" />
+    
+	<package name="default" namespace="" extends="struts-default">
+     	
+     	<!-- Returns a logged in agent to their dash-board -->
+    	<action name="homeButton">
+    	    <result name="success">agent-dashboard.jsp</result>
+    	</action>
+     	
+     	<!-- Allow agent login -->
+        <action name="login" class="ie.quickcs.controller.AgentController" method="login">
+    		<result name="success">agent-dashboard.jsp</result>
+    		<result name="error">index.jsp</result>
+ 		</action>
+ 		
+ 		<!-- Link to registration page -->
+        <action name="registerLink" class="ie.quickcs.controller.AgentController" method="registerLink">
+    		<result name="success">register.jsp</result>
+ 		</action>
+ 		
+ 		<!-- Register a new agent -->
+        <action name="register" class="ie.quickcs.controller.AgentController" method="agentRegister">
+    		<result name="success">agent-dashboard.jsp</result>
+    		<result name="error">register.jsp</result>
+ 		</action>
+ 		
+ 		<!-- View a conversation -->
+        <action name="viewConversation" class="ie.quickcs.controller.ConversationController" method="viewConversation">
+    		<result name="success">agent-conversations.jsp</result>
+    		<result name="error">agent-dashboard.jsp</result>
+ 		</action>
+ 		
+ 		<!-- Send Message to Client -->
+        <action name="sendMessage" class="ie.quickcs.controller.ConversationController" method="sendMessage">
+    		<result name="success">agent-conversations.jsp</result>
+    		<result name="error">agent-dashboard.jsp</result>
+ 		</action>
+ 		
+ 		<!-- Web Service Calls -->
+ 		
+ 		<action name="onMessage" class="ie.quickcs.messenger.Incomming" method="onMessage"/>
+ 		
+ 		<!-- End Web Service Calls -->
+ 		    
+    </package>    
+</struts>

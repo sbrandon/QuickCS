@@ -1,0 +1,65 @@
+.sb-container {
+	position: relative;
+	width: 150px;
+	height: 400px;
+	margin: 30px auto 0 auto;
+}
+
+.sb-container div {
+    position: absolute;
+	top: 0;
+	left: 0; 
+	width: 130px;
+	background: gray;
+	height: 250px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+
+	background-size: 100% auto;
+
+	border: solid;
+	border-width: 1px;
+	border-color: #000;
+	
+	-webkit-transform-origin: 25% 90%;
+	-moz-transform-origin: 25% 90%;
+	-o-transform-origin: 25% 90%;
+	-ms-transform-origin: 25% 90%;
+	transform-origin: 25% 90%;
+	
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.sb-container div:last-child:after{
+	content: '';
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #dddddd;
+	box-shadow: -1px -1px 1px rgba(0,0,0,0.5), 1px 1px 1px rgba(255,255,255,0.1);
+}
+
+.sb-container div h4{
+	margin: 5px;
+	padding: 5px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.leaf-src{
+  visibility: hidden;
+}
