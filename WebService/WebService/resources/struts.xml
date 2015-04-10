@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+    
+    <package name="default" extends="struts-default">
+    	
+    	<!-- provides a link to add company page -->
+    	<action name="addCompany">
+    		<result>addCompany.jsp</result>
+ 		</action>
+ 		
+    	<!-- Submit a Company -->
+    	<action name="submitCompany" class="ie.quickcs.controller.CompanyController" method="addCompany">
+    		<result name="success">addCompany.jsp</result>
+    		<result name="error">index.jsp</result>
+ 		</action>
+    	
+    	<!-- Web Service Calls -->
+        
+        <action name="register" class="ie.quickcs.webservice.WebService" method="register"/>
+        
+        <action name="login" class="ie.quickcs.webservice.WebService" method="logIn"/>
+        
+        <action name="getCompanies" class="ie.quickcs.webservice.WebService" method="getCompanies"/>
+        
+        <action name="getUser" class="ie.quickcs.webservice.WebService" method="getUser"/>
+        
+        <!-- End Web Service Calls -->
+    	
+    </package>
+    
+</struts>
