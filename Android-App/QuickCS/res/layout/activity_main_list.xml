@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_button_shape"
+        android:drawableLeft="@drawable/icon_title_profile"
+        android:shadowColor="#828282"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Profile"
+        android:textColor="#FAFCFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_button_shape"
+        android:drawableLeft="@drawable/icon_setting"
+        android:shadowColor="#828282"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Setting"
+        android:textColor="#FAFCFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_button_shape"
+        android:drawableLeft="@drawable/icon_payment"
+        android:shadowColor="#828282"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Payment"
+        android:textColor="#FAFCFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_button_shape"
+        android:drawableLeft="@drawable/icon_menu"
+        android:shadowColor="#828282"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Companies"
+        android:textColor="#FAFCFF"
+        android:textSize="20sp" />
+
+</LinearLayout>

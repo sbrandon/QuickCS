@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ie.quickcs"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+    
+    <permission android:name="ie.quickcs.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+
+    <uses-permission android:name="ie.quickcs.permission.C2D_MESSAGE" />
+    
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+        
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name="ie.quickcs.activity.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ie.quickcs.activity.SignUPActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="ie.quickcs.activity.CompanyList"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="ie.quickcs.activity.MainListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="ie.quickcs.activity.ChatBubbleActivity"
+            android:label="@string/title_activity_chat_bubble" >
+        </activity>
+        
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="ie.quickcs.messenger.gcmclient" />  
+            </intent-filter>   
+        </receiver>
+        <service
+            android:name="ie.quickcs.GCMIntentService">
+        </service>
+        
+    </application>
+
+</manifest>
